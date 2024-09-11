@@ -42,8 +42,9 @@ int main(){
     cout << "Availability of basic services (availability of water and sewerage):\n\
     1) Exist\n\
     2) No exist" << endl;
+    cin >> ch;
     if(ch == 1){
-        t += 2500;
+        t += 2.5;
     }
 
 
@@ -52,6 +53,7 @@ int main(){
     2) There are 3 floors\n\
     3) There are 4 floors \n\
     4) More then 4 floors" << endl;
+    cin >> ch;
     if(ch == 1){
         t *= 1.10;
     }else if(ch == 2 || ch == 3){
