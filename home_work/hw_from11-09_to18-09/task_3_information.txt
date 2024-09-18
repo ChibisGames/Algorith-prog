@@ -1,0 +1,14 @@
+Не могу запустить ни сам фрагмент lab из-за:
+
+task_3.cpp:12:22: error: '__nop' was not declared in this scope
+ #define   stop __nop();
+                      ^
+task_3.cpp:41:2: note: in expansion of macro 'stop'
+  stop
+  ^~~~"
+
+
+
+Не хочет запускать Debugger из-за ошибки или нехватки чего-то в файле launch.json
+
+Я честно пытался починить, но у меня ничего не вышло.
