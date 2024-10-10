@@ -19,6 +19,7 @@ int main(){
         cout << "---------------------------------------------------" << endl;
         cout << "Enter option: ";
         cin >> opt;
+        cin.clear();
         switch (opt) {
             case 1:
                 cout << "Please, enter x: " << endl;
@@ -35,7 +36,7 @@ int main(){
                     f += pow(x, i) / fact;
                     fact *= i + 1;
                 }
-                cout << "1) e^x =" << f << endl;
+                cout << "2) e^x =" << f << endl;
                 break;
             case 3:
                 // f(x) = ln(1 + x)
@@ -44,7 +45,7 @@ int main(){
                 {
                     f += pow(-1, i) * pow(x, i + 1) / (i + 1);
                 }
-                cout << "2) ln(1 + x) = " << f << endl;
+                cout << "3) ln(1 + x) = " << f << endl;
                 break;
             case 4:
                 // f(x) = sin(x)
@@ -56,7 +57,7 @@ int main(){
                     fact *= (2 * i + 2)*(2 * i + 3);
                     
                 }
-                cout << "3) sin(x) = " << f << endl;
+                cout << "4) sin(x) = " << f << endl;
                 break;
             case 5:
                 // f(x) = cos(x)
@@ -67,7 +68,7 @@ int main(){
                     f += pow(-1, i) * pow(x, 2 * i) / fact;
                     fact *= (2 * i + 1) * (2 * i + 2);
                 }
-                cout << "4) cos(x) = " << f << endl;
+                cout << "5) cos(x) = " << f << endl;
                 break;
             case 6: 
                 // f(x) = 1/ (1-x)^2
@@ -78,11 +79,11 @@ int main(){
                     {
                         f += (i + 1) * pow(x, i);
                     }
-                    cout << "5) 1/ (1-x)^2 = " << f << endl;
+                    cout << "6) 1/ (1-x)^2 = " << f << endl;
                 }
                 else
                 {
-                    cout << "5) Sorry,but x must be |x|<1";
+                    cout << "6) Sorry,but x must be |x|<1";
                 }
                 break;
         }
