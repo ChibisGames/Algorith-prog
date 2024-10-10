@@ -26,6 +26,7 @@ int main() {
             {
                 cout << "Enter a number in the range between 1000 and 999999" << endl;
                 cin >> r;
+                cin.clear(); // when number was vary hight (99999999999999999999+) cin don't worh. It was infinity cycle
             } while (1000 > r || r > 999999);
             break;
 

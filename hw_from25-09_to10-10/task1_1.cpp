@@ -3,55 +3,9 @@
 using namespace std;
 
 
-int sum_of_the_divisors(int n) // i don't want "litter" the code, task is being completed (about using for/while and do-while, i mean)
-{
-    int sum = 0;
-
-    for (int i = 1; i <= pow(n, 0.5); i++)
-    {
-        if (n % i == 0)
-        {
-            if (i != n / i)
-            {
-                sum += i;
-                sum += n / i;
-            }
-            else {
-                sum += i;
-            }
-        }
-
-    }
-
-    return sum;
-}
-
-
-int number_of_the_divisors(int n) // i don't want "litter" the code, task is being completed (about using for/while and do-while, i mean)
-{
-    int sum = 0;
-
-    for (int i = 1; i <= pow(n, 0.5); i++)
-    {
-        if (n % i == 0)
-        {
-            if (i != n / i)
-            {
-                sum += 2;
-            }
-            else {
-                sum += 1;
-            }
-        }
-
-    }
-
-    return sum;
-}
-
-
 int main() {
     int a, b, c, ans;
+    int sum;    
 
     // 1 
 
@@ -65,12 +19,80 @@ int main() {
         b = c;
     }
 
-    ans = sum_of_the_divisors(a) + sum_of_the_divisors(b);
+    sum = 0;
+    // for a
+    for (int i = 1; i <= pow(a, 0.5); i++)
+    {
+        if (a % i == 0)
+        {
+            if (i != a / i)
+            {
+                sum += i;
+                sum += a / i;
+            }
+            else {
+                sum += i;
+            }
+        }
+    }
+
+    ans = sum;
+    sum = 0;
+    // for b
+    for (int i = 1; i <= pow(b, 0.5); i++)
+    {
+        if (b % i == 0)
+        {
+            if (i != b / i)
+            {
+                sum += i;
+                sum += b / i;
+            }
+            else {
+                sum += i;
+            }
+        }
+    }
+
+    ans += sum;
     cout << "1) " << ans << endl;
 
     // 2
 
-    ans = number_of_the_divisors(a) * number_of_the_divisors(b);
+    sum = 0;
+    // for a
+    for (int i = 1; i <= pow(a, 0.5); i++)
+    {
+        if (a % i == 0)
+        {
+            if (i != a / i)
+            {
+                sum += 2;
+            }
+            else {
+                sum += 1;
+            }
+        }
+    }
+    ans = sum;
+
+    sum = 0;
+    // for b
+    for (int i = 1; i <= pow(b, 0.5); i++)
+    {
+        if (b % i == 0)
+        {
+            if (i != b / i)
+            {
+                sum += 2;
+            }
+            else {
+                sum += 1;
+            }
+        }
+    }
+
+    ans *= sum;
     cout << "2) " << ans << endl;
 
     // 3
