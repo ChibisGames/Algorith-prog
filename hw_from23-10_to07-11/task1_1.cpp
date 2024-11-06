@@ -35,7 +35,9 @@ int main()
 
     cout << "Enter new Y: " << endl;
     cin >> new_y;
-
+    
+    cout << "Result Y: " << lin_progress(b0, b1, new_x) << endl;
+    
     error = new_y - lin_progress(b0, b1, new_x);
     if (error >= 0)
     {
